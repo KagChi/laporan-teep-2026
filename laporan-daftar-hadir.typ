@@ -4,7 +4,7 @@
   nama: "Samuel",
   nim: "2231010010",
   pejabat: (
-    (nama: "Prof. Ray Guang Cheng", jabatan: "Dosen Pembimbing", hp: ""),
+    (nama: "Prof. Ray Guang Cheng", jabatan: "Professor BMW Lab", hp: ""),
     (nama: "Ian Joseph Chandra", jabatan: "Mentor Laboratorium", hp: ""),
   ),
   entries: (
