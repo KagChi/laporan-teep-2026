@@ -6,16 +6,26 @@ Dokumen laporan daftar hadir magang untuk program **TEEP 2026** (Taiwan Experien
 
 ```
 .
-├── documents/                          # Git submodule: stmik-kuwera/documents
+├── documents/                              # Git submodule: stmik-kuwera/documents
 │   └── src/templates/
-│       ├── daftar-hadir-magang/       # Template daftar hadir
-│       └── penilaian-prestasi-magang/  # Template penilaian prestasi
-├── laporan-daftar-hadir.typ            # Source Typst (data absensi)
-├── laporan-daftar-hadir.pdf            # Output PDF absensi (356KB, 40 hari)
-├── penilaian-prestasi-magang.typ       # Source Typst (penilaian prestasi)
-├── penilaian-prestasi-magang.pdf       # Output PDF penilaian (299KB)
-├── .gitmodules                         # Konfigurasi submodule
-└── README.md                           # File ini
+│       ├── daftar-hadir-magang/           # Template daftar hadir
+│       ├── formulir-pengajuan-dosen/       # Template formulir pengajuan dosen
+│       └── penilaian-prestasi-magang/      # Template penilaian prestasi
+├── files/                                  # Folder output PDF
+│   ├── onsite/                             # Laporan periode onsite
+│   │   ├── laporan-daftar-hadir.pdf        # Output PDF absensi (356KB, 40 hari)
+│   │   └── penilaian-prestasi-magang.pdf   # Output PDF penilaian (299KB)
+│   ├── remote/                             # Laporan periode remote (kosong)
+│   └── formulir-pengajuan-dosen.pdf        # Form pengajuan dosen (295KB)
+├── src/                                    # Folder source Typst
+│   ├── onsite/                             # Source Typst periode onsite
+│   │   ├── laporan-daftar-hadir.typ        # Source Typst (data absensi)
+│   │   └── penilaian-prestasi-magang.typ   # Source Typst (penilaian prestasi)
+│   ├── remote/                             # Source Typst periode remote (kosong)
+│   └── formulir-pengajuan-dosen.typ        # Source Typst form pengajuan dosen
+├── .gitignore                              # File yang diabaikan Git
+├── .gitmodules                             # Konfigurasi submodule
+└── README.md                               # File ini
 ```
 
 ## Persyaratan
@@ -40,11 +50,14 @@ git submodule update --init --recursive
 ### 2. Kompilasi PDF
 
 ```bash
-# Daftar Hadir Magang
-typst compile laporan-daftar-hadir.typ --root . laporan-daftar-hadir.pdf
+# Formulir Pengajuan Dosen
+typst compile src/formulir-pengajuan-dosen.typ --root . files/formulir-pengajuan-dosen.pdf
 
-# Penilaian Prestasi Magang
-typst compile penilaian-prestasi-magang.typ --root . penilaian-prestasi-magang.pdf
+# Daftar Hadir Magang (Onsite)
+typst compile src/onsite/laporan-daftar-hadir.typ --root . files/onsite/laporan-daftar-hadir.pdf
+
+# Penilaian Prestasi Magang (Onsite)
+typst compile src/onsite/penilaian-prestasi-magang.typ --root . files/onsite/penilaian-prestasi-magang.pdf
 ```
 
 ## Sumber Data
@@ -72,11 +85,12 @@ Data absensi diekstrak dari [Daily Logs BMW NTUST Internship 2026-TEEP-5-Samuel]
 
 ## Template
 
-Menggunakan template `daftar-hadir-magang` dan `penilaian-prestasi-magang` dari [stmik-kuwera/documents](https://github.com/stmik-kuwera/documents) sebagai git submodule.
+Menggunakan template `daftar-hadir-magang`, `formulir-pengajuan-dosen`, dan `penilaian-prestasi-magang` dari [stmik-kuwera/documents](https://github.com/stmik-kuwera/documents) sebagai git submodule.
 
 ```typst
-#import "documents/lib.typ": daftar-hadir-magang, penilaian-prestasi-magang
+#import "documents/lib.typ": daftar-hadir-magang, formulir-pengajuan-dosen, penilaian-prestasi-magang
 
+#formulir-pengajuan-dosen(...)
 #daftar-hadir-magang(...)
 #penilaian-prestasi-magang(...)
 ```

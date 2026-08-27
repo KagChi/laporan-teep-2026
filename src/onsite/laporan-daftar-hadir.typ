@@ -1,4 +1,4 @@
-#import "documents/lib.typ": daftar-hadir-magang
+#import "../../documents/lib.typ": daftar-hadir-magang
 
 #daftar-hadir-magang(
   nama: "Samuel",
