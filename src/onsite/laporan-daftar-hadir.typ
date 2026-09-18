@@ -4,8 +4,8 @@
   nama: "Samuel",
   nim: "2231010010",
   pejabat: (
-    (nama: "Prof. Ray Guang Cheng", jabatan: "Professor BMW Lab", hp: ""),
-    (nama: "Ian Joseph Chandra", jabatan: "Mentor Laboratorium", hp: ""),
+    (nama: "Prof. Ray Guang Cheng", jabatan: "Distinguished Professor", hp: ""),
+    (nama: "Ian Joseph Chandra, S.T., M.Sc.", jabatan: "Ph.D. Researcher", hp: ""),
   ),
   entries: (
     (hari_tanggal: "Jumat, 26 Jun 2026", datang: "09:00", pulang: "17:00", kegiatan: "Diskusi pengalihan Meetily dari aplikasi GUI desktop ke server API/CLI headless; persiapan ruang kerja dan dokumentasi", paraf: ""),
