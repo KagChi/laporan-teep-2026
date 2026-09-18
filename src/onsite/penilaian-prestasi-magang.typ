@@ -5,6 +5,7 @@
   nim: "2231010010",
   nama-tempat: "BMW Lab, National Taiwan University of Science and Technology (NTUST), Taipei, Taiwan",
   jangka-waktu: "26 Juni 2026 — 20 Agustus 2026",
+  penandatangan: "Ian Joseph Chandra, S.T., M.Sc.",
   deskripsi: [
     Selama program magang TEEP (Taiwan Experience Education Program) 2026 di BMW Lab NTUST, mahasiswa terlibat dalam tiga proyek utama:
 
